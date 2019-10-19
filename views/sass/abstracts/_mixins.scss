@@ -32,7 +32,25 @@
 }
 
 @mixin for-size($range) {
-  @if $range==phone {
+  @if $range==mob-s {
+    @media (max-width: $phone-boundary) {
+      @content;
+    }
+  }
+
+  @else if $range==mob-m {
+    @media (max-width: $phone-boundary) {
+      @content;
+    }
+  }
+
+  @else if $range==mob-l {
+    @media (max-width: $phone-boundary) {
+      @content;
+    }
+  }
+
+  @else if $range==phone {
     @media (max-width: $phone-boundary) {
       @content;
     }
