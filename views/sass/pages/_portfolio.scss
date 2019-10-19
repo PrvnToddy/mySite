@@ -117,6 +117,16 @@
 
       }
 
+      @include for-size(tablet-portrait) {
+        width: 38rem !important;
+
+      }
+
+      @include for-size(phone) {
+        width: 38rem !important;
+
+      }
+
       @include for-size(big-desktop) {
         width: 38rem !important;
       }
