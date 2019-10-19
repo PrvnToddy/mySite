@@ -34,11 +34,11 @@
     }
 
     @include for-size(mob-l) {
-      @include prefix(transform, translate(0%, 57%));
+      @include prefix(transform, translate(-5%, 57%));
     }
 
     @include for-size(mob-m) {
-      @include prefix(transform, translate(0%, 57%));
+      @include prefix(transform, translate(-7%, 57%));
     }
 
   }

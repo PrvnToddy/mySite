@@ -100,6 +100,10 @@
               font-size: 1rem;
               @include prefix(direction, inherit);
 
+              @include for-size(mob-l) {
+                margin-bottom: 2rem;
+              }
+
               a {
                 color: $white-color;
                 list-style: none;
