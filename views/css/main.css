@@ -925,6 +925,12 @@ body {
                 -ms-border-radius: 5px;
                 -o-border-radius: 5px;
                 border-radius: 5px; }
+      @media (max-width: 112.5em) {
+        .portfolio .card-pad .filtr-item {
+          width: 38rem !important; } }
+      @media (max-width: 75em) {
+        .portfolio .card-pad .filtr-item {
+          width: 38rem !important; } }
       @media (max-width: 56.25em) {
         .portfolio .card-pad .filtr-item {
           width: 38rem !important; } }
