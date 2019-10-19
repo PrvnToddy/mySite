@@ -930,7 +930,7 @@ body {
           width: 35rem !important; } }
       @media (max-width: 75em) {
         .portfolio .card-pad .filtr-item {
-          width: 35rem !important; } }
+          width: 36rem !important; } }
       @media (max-width: 56.25em) {
         .portfolio .card-pad .filtr-item {
           width: 35rem !important; } }
@@ -940,9 +940,12 @@ body {
       @media (min-width: 113.5em) {
         .portfolio .card-pad .filtr-item {
           width: 35rem !important; } }
+    @media (max-width: 112.5em) {
+      .portfolio .card-pad {
+        max-width: 1090px; } }
     @media (max-width: 75em) {
       .portfolio .card-pad {
-        max-width: 115rem; } }
+        max-width: 105rem; } }
     @media (max-width: 56.25em) {
       .portfolio .card-pad {
         max-width: 75rem; } }
