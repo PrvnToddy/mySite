@@ -945,7 +945,7 @@ body {
         max-width: 1090px; } }
     @media (max-width: 75em) {
       .portfolio .card-pad {
-        max-width: 105rem; } }
+        max-width: 115rem; } }
     @media (max-width: 56.25em) {
       .portfolio .card-pad {
         max-width: 75rem; } }
