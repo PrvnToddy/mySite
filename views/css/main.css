@@ -36,6 +36,9 @@ html {
   @media (max-width: 37.5em) {
     html {
       font-size: 43.75%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 40.62%; } }
   @media (min-width: 113.5em) {
     html {
       font-size: 75%; } }
