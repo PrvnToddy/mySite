@@ -2,8 +2,14 @@
   max-width: $grid-width;
   margin: 0 auto;
 
+
+
   @include for-size(tablet-landscape) {
-    margin: 0 7rem;
+    margin: 0 7rem !important;
+  }
+
+  @include for-size(mob-l) {
+    margin: 0 !important;
   }
 
   &:not(:last-child) {

@@ -98,6 +98,16 @@
               height: 25px;
               width: 25px;
             }
+
+            @include for-size(phone) {
+              height: 23px;
+              width: 23px;
+            }
+
+            @include for-size(mob-l) {
+              height: 20px;
+              width: 20px;
+            }
           }
         }
 

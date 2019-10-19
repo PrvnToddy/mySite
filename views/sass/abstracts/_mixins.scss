@@ -33,19 +33,19 @@
 
 @mixin for-size($range) {
   @if $range==mob-s {
-    @media (max-width: $phone-boundary) {
+    @media (max-width: $mobile-s) {
       @content;
     }
   }
 
   @else if $range==mob-m {
-    @media (max-width: $phone-boundary) {
+    @media (max-width: $mobile-m) {
       @content;
     }
   }
 
   @else if $range==mob-l {
-    @media (max-width: $phone-boundary) {
+    @media (max-width: $mobile-l) {
       @content;
     }
   }

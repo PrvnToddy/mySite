@@ -127,6 +127,10 @@
       right: 9.5rem;
       position: fixed;
       cursor: pointer;
+
+      @include for-size(phone) {
+        right: 5.5rem;
+      }
     }
 
     &__background {
@@ -141,6 +145,10 @@
       position: fixed;
       // transform: scale(110);
       transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1);
+
+      @include for-size(phone) {
+        right: 5.5rem;
+      }
     }
 
     &__nav {

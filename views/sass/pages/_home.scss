@@ -28,12 +28,20 @@
     margin: auto 5rem;
 
   }
+
+  @include for-size(mob-l) {
+    margin: auto 0rem;
+  }
 }
 
 .contact {
   margin: 5rem auto;
   padding: 10rem 0;
   overflow: hidden;
+
+  @include for-size(mob-l) {
+    padding: 10rem 8rem;
+  }
 }
 
 .footer {

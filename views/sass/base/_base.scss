@@ -29,7 +29,7 @@ html {
     font-size: 43.75%; //1 rem = 8px , 8/16 = 50%
   }
 
-  @include for-size(phone) {
+  @include for-size(mob-l) {
     font-size: 40.62%; //1 rem = 8px , 8/16 = 50%
   }
 

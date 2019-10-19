@@ -2,7 +2,10 @@
   @include for-size(tablet-portrait) {
     position: relative;
     height: 100vh;
+  }
 
+  @include for-size(mob-l) {
+    height: 100rem;
   }
 
   h1 {
@@ -30,6 +33,13 @@
       @include prefix(transform, translate(10%, 50%));
     }
 
+    @include for-size(mob-l) {
+      @include prefix(transform, translate(0%, 57%));
+    }
+
+    @include for-size(mob-m) {
+      @include prefix(transform, translate(0%, 57%));
+    }
 
   }
 
@@ -50,6 +60,10 @@
         0 1.5rem 2rem rgba(0, 0, 0, 0.22);
       transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
       z-index: 50;
+
+      @include for-size(mob-m) {
+        margin: 0.5rem;
+      }
 
       &:hover {
         box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25),

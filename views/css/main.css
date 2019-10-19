@@ -36,7 +36,7 @@ html {
   @media (max-width: 37.5em) {
     html {
       font-size: 43.75%; } }
-  @media (max-width: 37.5em) {
+  @media (max-width: 26.56em) {
     html {
       font-size: 40.62%; } }
   @media (min-width: 113.5em) {
@@ -177,7 +177,10 @@ body {
   margin: 0 auto; }
   @media (max-width: 75em) {
     .row {
-      margin: 0 7rem; } }
+      margin: 0 7rem !important; } }
+  @media (max-width: 26.56em) {
+    .row {
+      margin: 0 !important; } }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
     @media (max-width: 56.25em) {
@@ -334,6 +337,9 @@ body {
     right: 9.5rem;
     position: fixed;
     cursor: pointer; }
+    @media (max-width: 37.5em) {
+      .navigation__barker__button {
+        right: 5.5rem; } }
   .navigation__barker__background {
     height: 3rem;
     width: 3rem;
@@ -344,6 +350,9 @@ body {
     right: 9.5rem;
     position: fixed;
     transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1); }
+    @media (max-width: 37.5em) {
+      .navigation__barker__background {
+        right: 5.5rem; } }
   .navigation__barker__nav {
     height: 100vh;
     width: 0;
@@ -532,11 +541,17 @@ body {
   @media (max-width: 56.25em) {
     .portfolio {
       margin: auto 5rem; } }
+  @media (max-width: 26.56em) {
+    .portfolio {
+      margin: auto 0rem; } }
 
 .contact {
   margin: 5rem auto;
   padding: 10rem 0;
   overflow: hidden; }
+  @media (max-width: 26.56em) {
+    .contact {
+      padding: 10rem 8rem; } }
 
 .footer {
   padding: 2rem; }
@@ -556,6 +571,9 @@ body {
     @media (max-width: 37.5em) {
       .header__landing_page .text {
         transform: translate(0%, -150%) !important; } }
+    @media (max-width: 26.56em) {
+      .header__landing_page .text {
+        transform: translate(15%, -150%) !important; } }
     .header__landing_page .text p {
       letter-spacing: 0.4rem;
       -webkit-letter-spacing: 0.4rem;
@@ -587,6 +605,9 @@ body {
       .header__landing_page .developer img {
         height: 43rem;
         transform: translate(25%, -15%) !important; } }
+    @media (max-width: 26.56em) {
+      .header__landing_page .developer img {
+        transform: translate(20%, -20%) !important; } }
 
 @media (max-width: 56.25em) {
   .about {
@@ -688,6 +709,14 @@ body {
             .about__container .timeline__item .timeline-icon svg {
               height: 25px;
               width: 25px; } }
+          @media (max-width: 37.5em) {
+            .about__container .timeline__item .timeline-icon svg {
+              height: 23px;
+              width: 23px; } }
+          @media (max-width: 26.56em) {
+            .about__container .timeline__item .timeline-icon svg {
+              height: 20px;
+              width: 20px; } }
       .about__container .timeline__item .timeline-content {
         width: 45%;
         background: #f2f2f1;
@@ -775,6 +804,10 @@ body {
     position: relative;
     height: 100vh; } }
 
+@media (max-width: 26.56em) {
+  .skills {
+    height: 100rem; } }
+
 .skills h1 span {
   letter-spacing: 1rem; }
 
@@ -802,6 +835,20 @@ body {
       -ms-transform: translate(10%, 50%);
       -o-transform: translate(10%, 50%);
       transform: translate(10%, 50%); } }
+  @media (max-width: 26.56em) {
+    .skills .skills__developer {
+      -webkit-transform: translate(0%, 57%);
+      -moz-transform: translate(0%, 57%);
+      -ms-transform: translate(0%, 57%);
+      -o-transform: translate(0%, 57%);
+      transform: translate(0%, 57%); } }
+  @media (max-width: 20.4375em) {
+    .skills .skills__developer {
+      -webkit-transform: translate(0%, 57%);
+      -moz-transform: translate(0%, 57%);
+      -ms-transform: translate(0%, 57%);
+      -o-transform: translate(0%, 57%);
+      transform: translate(0%, 57%); } }
 
 @media (max-width: 56.25em) {
   .skills .card {
@@ -822,6 +869,9 @@ body {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3), 0 1.5rem 2rem rgba(0, 0, 0, 0.22);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   z-index: 50; }
+  @media (max-width: 20.4375em) {
+    .skills .card .skillset {
+      margin: 0.5rem; } }
   .skills .card .skillset:hover {
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25), 0 0.5rem 1rem rgba(0, 0, 0, 0.22); }
   .skills .card .skillset .left {
