@@ -1,0 +1,41 @@
+.header {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.about {
+  overflow: hidden;
+  padding-top: 5rem;
+}
+
+.skills {
+  padding: 13rem 0 5rem 0;
+  overflow: hidden;
+}
+
+.portfolio {
+  margin: 0 auto;
+  max-width: 140rem;
+  overflow: hidden;
+  padding-top: 7rem;
+
+  @include for-size(tablet-landscape) {
+    margin: auto 0rem;
+  }
+
+  @include for-size(tablet-portrait) {
+    margin: auto 5rem;
+
+  }
+}
+
+.contact {
+  margin: 5rem auto;
+  padding: 10rem 0;
+  overflow: hidden;
+}
+
+.footer {
+  padding: 2rem;
+}

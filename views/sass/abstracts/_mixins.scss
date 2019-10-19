@@ -1,0 +1,64 @@
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin prefix($prop, $val) {
+
+  @each $prefix in '-webkit-',
+  '-moz-',
+  '-ms-',
+  '-o-',
+  '' {
+    #{$prefix}#{$prop}: $val;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: .5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@mixin for-size($range) {
+  @if $range==phone {
+    @media (max-width: $phone-boundary) {
+      @content;
+    }
+  }
+
+  @else if $range==tablet-portrait {
+    @media (max-width: $tablet-portrait-boundary) {
+      @content;
+    }
+  }
+
+  @else if $range==tablet-landscape {
+    @media (max-width: $tablet-landscaper-boundary) {
+      @content;
+    }
+  }
+
+  @else if $range==desktop {
+    @media (max-width: $desktop-upper-boundary) {
+      @content;
+    }
+  }
+
+  @else if $range==big-desktop {
+    @media (min-width: #{$desktop-upper-boundary + 1}) {
+      @content;
+    }
+  }
+}

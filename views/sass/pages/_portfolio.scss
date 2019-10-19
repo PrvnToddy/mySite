@@ -1,0 +1,219 @@
+.portfolio {
+  // padding: 3rem;
+  border: 1px solid $default-color;
+
+  @include for-size(tablet-landscape) {
+    border: 0px solid $default-color;
+
+    hr {
+      display: none;
+    }
+  }
+
+  .card-pad {
+    margin: 0 auto;
+    max-width: 1045px;
+
+    .filtr-item {
+      padding: 2rem !important;
+
+      .thumbnail {
+        // padding-bottom: 2rem;
+        border: 1px solid $svg-blue;
+        background: $svg-blue;
+        @include prefix(border-radius, 5px);
+        // display: inline-block;
+        height: 100%;
+        // margin: 2rem;
+        position: relative;
+        width: 100%;
+        box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
+
+        @include for-size(tablet-portrait) {
+          width: 32rem;
+
+        }
+
+        @include for-size(phone) {
+          width: 35rem;
+
+        }
+
+
+        .top {
+          position: relative;
+
+          .bg-video {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            border-bottom: 1px solid $svg-blue;
+            //   border-radius: 5px;
+          }
+        }
+
+        .bottom {
+          position: relative;
+          // margin: 20rem 0 0 0;
+          padding: 0 1rem;
+
+          h1 {
+            font-size: 2rem;
+            @include prefix(letter-spacing, .3rem);
+          }
+
+          p {
+            font-size: 1rem;
+            @include prefix(letter-spacing, 0.2rem);
+          }
+
+          h2 {
+            color: $default-color;
+          }
+
+          .small-box {
+            li {
+              margin: 1rem 4px;
+              display: inline-block;
+              padding: 1rem;
+              font-size: 1rem;
+              color: $white-color;
+              background: rgba(0, 0, 0, 0.1);
+              box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
+                0 1px rgba(0, 0, 0, 0.25);
+            }
+          }
+
+          .buttons {
+            li {
+              margin: 1rem 4px;
+              display: inline-block;
+              padding: 1rem;
+              font-size: 1rem;
+              @include prefix(direction, inherit);
+
+              a {
+                color: $white-color;
+                list-style: none;
+                text-decoration: none;
+                @include prefix(transition, all 0.5s);
+
+                &:hover {
+                  color: $default-color;
+                  padding: 5px;
+                  border: 1px solid $default-color;
+                  @include prefix(border-radius, 5px);
+                }
+              }
+            }
+          }
+        }
+
+      }
+
+      @include for-size(big-desktop) {
+        width: 38rem !important;
+      }
+    }
+
+
+
+    @include for-size(tablet-landscape) {
+      max-width: 115rem;
+    }
+
+    @include for-size(tablet-portrait) {
+      max-width: 75rem;
+    }
+
+    @include for-size(phone) {
+      max-width: 40rem;
+    }
+
+    @include for-size(big-desktop) {
+      max-width: 120rem;
+    }
+
+
+  }
+
+  h1 {
+    color: $default-color;
+    margin-top: 2rem;
+  }
+
+  p {
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    @include prefix(letter-spacing, 1rem);
+    color: $white-color;
+  }
+
+  &__buttons {
+    font-size: 1.5rem;
+    text-align: center;
+    @include prefix(transition, all 0.2s);
+
+    ul {
+      font-family: "Oswald", sans-serif;
+
+      .dot {
+        // background-color: $default-color;
+
+        a {
+          color: $default-color;
+          font-size: 1.45rem;
+          font-weight: 600;
+        }
+      }
+
+      li {
+        display: inline-block;
+        padding: 1.5rem;
+        border: 1px solid $white-color;
+        @include prefix(border-radius, 5px);
+        cursor: pointer;
+
+        &:nth-child(n + 2) {
+          margin-left: 2rem;
+        }
+
+        box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
+        @include prefix(transition, all 0.2s);
+
+        a {
+          text-decoration: none;
+          list-style: none;
+          color: $white-color;
+          @include prefix(letter-spacing, 0.2rem);
+        }
+
+        &:hover {
+          background-color: $default-color;
+          font-size: 1.45rem;
+
+          a {
+            color: $white-color;
+          }
+
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        &:active {
+          box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+      }
+    }
+  }
+
+
+
+
+}

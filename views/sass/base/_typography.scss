@@ -1,0 +1,41 @@
+.header-secondary {
+    color: $white-color;
+    text-transform: uppercase;
+    @include prefix(letter-spacing, .6rem);
+    font-size: 2.5rem;
+    font-family: "Oswald", sans-serif;
+
+    span {
+        color: $default-color;
+    }
+
+    @include for-size(tablet-landscape) {
+        @include prefix(letter-spacing, .4rem);
+    }
+
+    @include for-size(tablet-portrait) {
+        @include prefix(letter-spacing, .2rem);
+    }
+}
+
+.header-primary {
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+    @include prefix(letter-spacing, 1rem);
+    font-family: 'Oswald', sans-serif;
+    color: $white-color;
+
+    span {
+        color: $default-color;
+        letter-spacing: 2rem;
+    }
+
+    @include for-size(tablet-landscape) {
+        @include prefix(letter-spacing, .8rem);
+    }
+
+    @include for-size(tablet-portrait) {
+        @include prefix(letter-spacing, .6rem);
+    }
+}

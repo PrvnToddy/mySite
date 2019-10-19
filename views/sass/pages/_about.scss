@@ -1,0 +1,181 @@
+.about {
+  @include for-size(tablet-portrait) {
+    position: relative;
+
+    .row {
+      max-width: 114rem;
+    }
+  }
+
+  &__avatar {
+    padding: 25rem 0;
+
+    @include prefix(transform, translateX(-120%));
+
+    @include for-size(tablet-portrait) {
+      padding: 0;
+      @include prefix(transform, translateX(55%));
+    }
+
+    @include for-size(phone) {
+      @include prefix(transform, translateX(20%));
+    }
+
+    .about__avatar__developer {
+      height: 120rem;
+
+      @include for-size(tablet-portrait) {
+        position: absolute;
+        height: 100rem;
+      }
+    }
+  }
+
+  &__container {
+    max-width: 1100px;
+    margin-top: 5rem;
+    z-index: 500;
+
+    //TimeLine Journey
+    .timeline {
+      position: relative;
+      width: 100%;
+      padding: 0 1rem;
+      @include prefix(transition, all 0.4s ease);
+
+      &:before {
+        content: '';
+        width: 0.3rem;
+        height: 100%;
+        background: $default-color;
+        left: 50%;
+        top: 0%;
+        position: absolute;
+      }
+
+      &:after {
+        content: '';
+        clear: both;
+        display: table;
+        width: 100%;
+      }
+
+      &__item {
+        margin-bottom: 5rem;
+        position: relative;
+        @include clearfix;
+
+        .timeline-icon {
+          position: absolute;
+          background: $default-color;
+          width: 5rem;
+          height: 5rem;
+          top: 0;
+          left: 50%;
+          overflow: hidden;
+          margin-left: -2.3rem;
+          @include prefix(border-radius, 50%);
+
+          svg {
+            position: relative;
+            top: 1rem;
+            left: 1rem;
+            height: 35px;
+            width: 35px;
+
+            @include for-size(desktop) {
+              height: 30px;
+              width: 30px;
+            }
+
+            @include for-size(tablet-landscape) {
+              height: 25px;
+              width: 25px;
+            }
+
+
+            @include for-size(tablet-portrait) {
+              height: 25px;
+              width: 25px;
+            }
+          }
+        }
+
+        .timeline-content {
+          width: 45%;
+          background: $white-color;
+          padding: 2rem;
+          @include prefix(box-shadow, 0 .3rem 0 rgba(0, 0, 0, 0.1));
+          @include prefix(border-radius, .5rem);
+          @include prefix(transition, all 0.3s ease);
+
+          h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2rem;
+            @include prefix(letter-spacing, 0.7rem);
+            padding: 1.5rem;
+            background: $default-color;
+            color: $white-color;
+            margin: -2rem -2rem 0 -2rem;
+            font-weight: 300;
+            @include prefix(border-radius, .3rem .3rem 0 0);
+          }
+
+          .small-box {
+            font-size: 1.5rem;
+            margin: 1rem auto;
+            padding: 1rem 1rem;
+            background: $body-color;
+            @include prefix(border-radius, 0.5rem);
+            background: rgba(0, 0, 0, 0.1);
+            box-shadow: inset 0 .1rem .2rem rgba(0, 0, 0, 0.25),
+              0 .1rem rgba(255, 255, 255, 0.8);
+
+            span {
+              float: right;
+              color: $body-color;
+            }
+          }
+
+          p {
+            font-size: 1.5rem;
+          }
+
+          .date {
+            @include prefix(display, flex);
+            padding: 1.5rem 0 0 0;
+
+            p {
+              // padding: .3rem 0;
+              margin: auto 0;
+            }
+          }
+
+          &:before {
+            content: '';
+            position: absolute;
+            left: 45%;
+            top: 2rem;
+            width: 0;
+            height: 0;
+            border-top: .7rem solid transparent;
+            border-bottom: .7rem solid transparent;
+            border-left: .7rem solid $default-color;
+          }
+
+          &.right {
+            float: right;
+
+            &:before {
+              content: '';
+              right: 45%;
+              left: inherit;
+              border-left: 0;
+              border-right: .7rem solid $default-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}

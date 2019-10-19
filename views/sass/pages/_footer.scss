@@ -1,0 +1,12 @@
+.footer {
+    text-align: center;
+    font-size: 1.5rem;
+    border-top: 1px solid $default-color;
+    letter-spacing: .2rem;
+    font-weight: 400;
+
+    span {
+        color: $default-color;
+        font-size: 2rem;
+    }
+}

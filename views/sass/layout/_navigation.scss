@@ -1,0 +1,280 @@
+.navigation {
+  position: fixed !important;
+  @include prefix(display, flex);
+  @include prefix(justify-content, space-between);
+  @include prefix(flex-direction, row);
+  @include prefix(flex-wrap, wrap);
+  align-items: center;
+  padding: 2rem 10rem;
+
+  width: 100%;
+  z-index: 9999;
+  background-color: $body-color;
+  position: relative;
+
+
+
+  // @include for-size(tablet-portrait) {
+  //   @include prefix(justify-content, center);
+  // }
+
+  @include for-size(phone) {
+    @include prefix(justify-content, center);
+  }
+
+  // @include for-size(tablet-landscape-up) {
+  //   @include prefix(justify-content, space-between);
+  // }
+
+  a {
+    text-decoration: none;
+  }
+
+  //icons
+  nav {
+
+    // height: 2rem;
+    ul {
+      .icon-list {
+        @include for-size(phone) {
+          display: none;
+        }
+
+        // @include for-size(tablet-portrait) {
+        //   display: none;
+        // }
+
+        // @include for-size(tablet-landscape-up) {
+        //   display: inline-block;
+        // }
+      }
+
+      // @include prefix(display, flex);
+      li {
+        padding: 1rem 2rem;
+        list-style: none;
+        display: inline-block;
+
+        a {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  //ProgressBar
+  &__prog-bar {
+    position: absolute;
+    height: 0.4rem;
+    bottom: -0.1rem;
+    width: 100%;
+    transition: width 0.3s linear;
+    left: 0;
+    background-color: $body-color;
+    // appearance: none;
+    border: $body-color;
+    @include prefix(appearance, none);
+    box-shadow: none;
+    color: $default-color;
+  }
+
+  progress::-webkit-progress-bar {
+    background: $body-color;
+  }
+
+  progress::-webkit-progress-value {
+    background: $default-color;
+  }
+
+  // progress::-webkit-progress-bar {
+  //   background: $default-color;
+  // }
+
+  progress::-moz-progress-bar {
+    background: $default-color;
+  }
+
+  progress::-ms-progress-value {
+    background: $default-color;
+  }
+
+  progress::-o-progress-bar {
+    background: $default-color;
+  }
+
+  progress::-o-progress-value {
+    background: $default-color;
+  }
+
+  // progress::-webkit-progress-bar {
+  //   background: $default-color;
+  // }
+
+  //Icon Toggle
+  &__barker {
+    &__checkbox {
+      display: none;
+    }
+
+    &__button {
+      position: absolute;
+      background-color: $body-color;
+      height: 3rem;
+      width: 3rem;
+      border-radius: 50%;
+      z-index: 2000;
+      top: 2.5rem;
+      right: 9.5rem;
+      position: fixed;
+      cursor: pointer;
+    }
+
+    &__background {
+      height: 3rem;
+      width: 3rem;
+      border-radius: 50%;
+      background-image: radial-gradient($default-color, $body-color);
+      // background-image: transparent;
+      z-index: 1000;
+      top: 2.5rem;
+      right: 9.5rem;
+      position: fixed;
+      // transform: scale(110);
+      transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1);
+    }
+
+    &__nav {
+      height: 100vh;
+      width: 0;
+      position: fixed;
+      top: 0;
+      right: -10rem;
+      z-index: 1500;
+      opacity: 0;
+      transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    &__list {
+      // white-space: pre-line;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      list-style: none;
+      text-align: center;
+      // width: 100%;
+    }
+
+    &__item {
+      margin: 1rem;
+    }
+
+    &__link {
+
+      &:link,
+      &:visited {
+        font-size: 3rem;
+        font-weight: 700;
+        color: $white-color;
+        text-decoration: none;
+        text-transform: uppercase;
+        background-image: linear-gradient(120deg,
+            transparent 0%,
+            transparent 50%,
+            $white-color 50%);
+        background-size: 220%;
+        transition: all 0.4s;
+        display: inline-block;
+        padding: 1rem;
+
+        span {
+          margin-right: 1rem;
+          display: inline-block;
+        }
+      }
+
+      &:hover,
+      &:active {
+        background-position: 100%;
+        color: $svg-blue;
+        transform: translateX(1rem);
+      }
+    }
+
+    &__checkbox:checked~&__background {
+      transform: scale(120);
+
+      @include for-size(desktop) {
+        transform: scale(150);
+      }
+    }
+
+    &__checkbox:checked~&__nav {
+      opacity: 1;
+      width: 100%;
+      right: 0rem;
+    }
+
+    &__icon {
+      position: relative;
+      margin-top: 1.1rem;
+      left: 0.5rem;
+      top: 0.4rem;
+
+      &,
+      &::before,
+      &::after {
+        width: 2rem;
+        height: 1px;
+        background-color: #fe9740;
+        display: inline-block;
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        transition: all 0.2s;
+      }
+
+      &::before {
+        top: -0.6rem;
+      }
+
+      &::after {
+        top: 0.6rem;
+        width: 1.4rem;
+      }
+    }
+
+    &__button:hover &__icon::before {
+      top: -0.9rem;
+    }
+
+    &__button:hover &__icon::after {
+      top: 0.9rem;
+    }
+
+    &__checkbox:checked+&__button &__icon {
+      background-color: transparent;
+    }
+
+    &__checkbox:checked+&__button &__icon::before {
+      top: 0;
+      transform: rotate(135deg);
+      background-color: $default-color;
+    }
+
+    &__checkbox:checked+&__button &__icon::after {
+      top: 0;
+      width: 2rem;
+      transform: rotate(-135deg);
+      background-color: $default-color;
+    }
+  }
+}
+
+// progress::-webkit-progress-value {
+//   background-color: $default-color;
+// }

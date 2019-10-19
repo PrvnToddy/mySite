@@ -1,0 +1,88 @@
+.scroll {
+  @include for-size(tablet-portrait) {
+    display: none;
+  }
+
+  .dotnav-left {
+    left: 3rem;
+    top: 45%;
+    margin-top: -5rem;
+    height: 10rem;
+    z-index: 999;
+    @include prefix(position, fixed);
+  }
+
+  .dotnav {
+    padding: 0;
+    list-style: none;
+    font-size: 0.001px;
+  }
+
+  .dotnav>li {
+    display: inline-block;
+    font-size: 1rem;
+    vertical-align: top;
+  }
+
+  .dotnav>li:nth-child(n + 2) {
+    margin-left: 1.5rem;
+  }
+
+  .dotnav>li>a {
+    display: inline-block;
+    @include prefix(box-sizing, content-box);
+    width: 1.5rem;
+    height: 1.5rem;
+    @include prefix(border-radius, 50%);
+    border: 2px solid $default-color;
+    vertical-align: top;
+    overflow: hidden;
+    padding: 0;
+    text-indent: -999%;
+  }
+
+  .active {
+    background: $default-color;
+  }
+
+  .dotnav>li>a:focus,
+  .dotnav>li>a:hover {
+    background: $default-color;
+    outline: none;
+  }
+
+  .dotnav>li>a:active {
+    background: $default-color;
+  }
+
+  .dotnav>li.active>a {
+    background: $default-color;
+  }
+
+  .dotnav-vertical>li {
+    display: block;
+    margin-right: 1rem;
+  }
+
+  .dotnav-vertical>li:nth-child(n + 2) {
+    margin-left: 0;
+    margin-top: 3rem;
+  }
+}
+
+
+
+.up {
+  top: 85%;
+  /* background-color: red; */
+  z-index: 1000;
+  position: fixed;
+  right: 5%;
+  transition: all 1s;
+
+  &:hover {
+    color: $white-color;
+    background-color: rgba($default-color, .6);
+    border: 1px solid $svg-blue;
+  }
+}

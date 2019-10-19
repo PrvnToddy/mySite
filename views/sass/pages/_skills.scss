@@ -1,0 +1,79 @@
+.skills {
+  @include for-size(tablet-portrait) {
+    position: relative;
+    height: 100vh;
+
+  }
+
+  h1 {
+    span {
+      letter-spacing: 1rem;
+    }
+  }
+
+  .skills__developer {
+    @include prefix(transform, translateX(-40%));
+
+    .skills__avatar {
+      height: 65rem;
+    }
+
+    @include for-size(tablet-portrait) {
+      @include prefix(transform, translate(70%, 30%));
+
+      .skills__avatar {
+        height: 50rem;
+      }
+    }
+
+    @include for-size(phone) {
+      @include prefix(transform, translate(10%, 50%));
+    }
+
+
+  }
+
+  .card {
+    @include for-size(tablet-portrait) {
+      position: absolute;
+    }
+
+    .skillset {
+      background: $svg-blue;
+      @include prefix(border-radius, 2px);
+      display: inline-block;
+      height: 20rem;
+      margin: 1.2rem;
+      position: relative;
+      width: 15.3rem;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3),
+        0 1.5rem 2rem rgba(0, 0, 0, 0.22);
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      z-index: 50;
+
+      &:hover {
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25),
+          0 .5rem 1rem rgba(0, 0, 0, 0.22);
+      }
+
+      .left {
+        // position: absolute;
+        // float: left;
+        margin: .5rem 3rem;
+
+        img {
+          height: 10rem;
+          width: 10rem;
+        }
+      }
+
+      .right {
+        // float: right;
+        margin: .5rem 3rem;
+        font-size: 5.5rem;
+        color: $default-color;
+        font-family: 'Oswald', sans-serif;
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+.header {
+  &__landing_page {
+    position: relative;
+    // padding: 20% 0;
+    top: 50%;
+    transform: translateY(-20%);
+
+    // @include for-size(tablet-landscape) {
+    //   transform: translateY(-25%);
+    // }
+
+    .text {
+      float: left;
+      color: $white-color;
+
+      @include for-size(tablet-portrait) {
+        position: absolute;
+        z-index: 700;
+        transform: translate(15%, -150%) !important;
+      }
+
+      @include for-size(phone) {
+        transform: translate(0%, -150%) !important;
+      }
+
+      p {
+        letter-spacing: 0.4rem;
+        @include prefix(letter-spacing, 0.4rem);
+        font-size: 1.7rem;
+        font-weight: 400;
+        line-height: 1.5rem;
+        color: $white-color;
+
+        .txt {
+          color: $default-color;
+
+          &::after {
+            content: "";
+            border-right: 0.1rem solid $default-color;
+            animation: blink 1s linear infinite;
+          }
+        }
+      }
+    }
+
+    .developer {
+
+      img {
+        height: 60rem;
+        background-size: 100%;
+        margin-top: -35%;
+
+        @include for-size(tablet-portrait) {
+          margin-top: 0%;
+          position: absolute;
+          height: 60rem;
+          transform: translate(35%, -40%) !important;
+        }
+
+        @include for-size(phone) {
+          height: 43rem;
+          transform: translate(25%, -15%) !important;
+        }
+      }
+    }
+  }
+}

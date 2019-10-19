@@ -1,0 +1,22 @@
+//Abstracts
+@import "abstracts/variables";
+@import "abstracts/mixins";
+//Resets
+@import "base/base";
+@import "base/typography";
+@import "base/utilites";
+//Components
+@import "components/buttons";
+//Layouts
+@import "layout/grid";
+@import "layout/magicMouse";
+@import "layout/navigation";
+@import "layout/scroll";
+//Pages
+@import "pages/home.scss";
+@import "pages/landingpage";
+@import "pages/about";
+@import "pages/skills";
+@import "pages/portfolio";
+@import "pages/contact";
+@import "pages/footer";
