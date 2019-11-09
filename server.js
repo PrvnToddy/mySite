@@ -16,8 +16,9 @@ app.use(express.json());
 app.use(express.static(__dirname + "/views"));
 
 app.get("/", (req, res) => {
-  res.setHeader("Set-Cookie", "HttpOnly;Secure;SameSite=Strict");
   res.sendFile(path.join(__dirname, "views", "index.html"));
+  res.setHeader("Set-Cookie", "HttpOnly;Secure;SameSite=Strict");
+
 });
 
 app.listen(PORT, () => {
