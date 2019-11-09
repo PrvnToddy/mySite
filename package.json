@@ -4,15 +4,26 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass views/sass/main.scss views/css/main.css -w"
+    "sass": "node-sass views/sass/main.scss views/css/main.css -w",
+    "compile": "node-sass views/sass/main.scss views/css/style.comp.css",
+    "concat": "concat -o views/css/style.concat.css views/css/style.comp.css views/css/sweetalert2.min.css",
+    "prefix": "postcss views/css/style.concat.css -u autoprefixer -b -o views/css/style.prefix.css",
+    "compress": "node-sass views/css/style.prefix.css views/css/main.css --output-style compressed",
+    "build": "npm-run-all compile concat prefix compress",
+    "browser": "live-server",
+    "start": "npm-run-all --parallel browser sass"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "autoprefixer": "^9.7.1",
+    "concat": "^1.0.3",
     "express": "^4.17.1",
     "node-sass": "^4.12.0",
     "nodemailer": "^6.3.1",
-    "nodemailer-mailgun-transport": "^1.4.0"
+    "nodemailer-mailgun-transport": "^1.4.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^6.1.3"
   }
 }
